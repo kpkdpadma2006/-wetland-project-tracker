@@ -288,3 +288,176 @@ document.addEventListener(
 
     }
 );
+
+
+// ========================================
+// RESEARCH WORKFLOW
+// ========================================
+
+function loadWorkflowTasks() {
+
+    const container =
+        document.getElementById("workflow-tasks");
+
+    container.innerHTML = "";
+
+    let completed = 0;
+
+
+    projectData.tasks.forEach(task => {
+
+        if (task.status === "completed") {
+            completed++;
+        }
+
+
+        const div =
+            document.createElement("div");
+
+        div.className =
+            "workflow-task";
+
+
+        if (task.status === "completed") {
+            div.classList.add("completed");
+        }
+
+        if (task.status === "current") {
+            div.classList.add("current");
+        }
+
+
+        const isChecked =
+            task.status === "completed";
+
+
+        div.innerHTML = `
+
+            <input
+                type="checkbox"
+                class="workflow-checkbox"
+                ${isChecked ? "checked" : ""}
+            >
+
+            <span class="workflow-name">
+                ${task.name}
+            </span>
+
+            <span class="workflow-phase">
+                ${task.phase}
+            </span>
+
+            <span class="
+                workflow-status
+                status-${task.status}
+            ">
+                ${getStatusText(task.status)}
+            </span>
+
+        `;
+
+
+        const checkbox =
+            div.querySelector(
+                ".workflow-checkbox"
+            );
+
+
+        checkbox.addEventListener(
+            "change",
+            function () {
+
+                task.status =
+                    this.checked
+                        ? "completed"
+                        : "pending";
+
+
+                saveProgress();
+
+                loadWorkflowTasks();
+
+                updateProjectProgress();
+
+            }
+        );
+
+
+        container.appendChild(div);
+
+    });
+
+
+    document.getElementById(
+        "completed-count"
+    ).textContent =
+        completed + "/" +
+        projectData.tasks.length;
+
+}
+
+
+function getStatusText(status) {
+
+    if (status === "completed") {
+        return "Completed";
+    }
+
+    if (status === "current") {
+        return "Current";
+    }
+
+    return "Pending";
+}
+function updateProjectProgress() {
+
+    const total =
+        projectData.tasks.length;
+
+    const completed =
+        projectData.tasks.filter(
+            task =>
+                task.status === "completed"
+        ).length;
+
+
+    const progress =
+        Math.round(
+            (completed / total) * 100
+        );
+
+
+    const progressBar =
+        document.querySelector(
+            ".progress-bar"
+        );
+
+
+    const progressText =
+        document.querySelector(
+            ".progress-percentage"
+        );
+
+
+    if (progressBar) {
+
+        progressBar.style.width =
+            progress + "%";
+
+    }
+
+
+    if (progressText) {
+
+        progressText.textContent =
+            progress + "%";
+
+    }
+
+
+    projectData.overallProgress =
+        progress;
+
+}
+
+cd wetland-project-tracker

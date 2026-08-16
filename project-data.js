@@ -6,133 +6,149 @@ const projectData = {
 
     lastUpdated: "16 August 2026",
 
-    tasks: [
-        {
-            name: "Study Area Selection & Boundary",
-            completed: true
-        },
-        {
-            name: "GEE Registration & Setup",
-            completed: true
-        },
-        {
-            name: "Study Area Upload to GEE",
-            completed: true
-        },
-        {
-            name: "Landsat Data Collection",
-            completed: true
-        },
-        {
-            name: "Reference LULC Download",
-            completed: true
-        },
-        {
-            name: "NDVI Generation",
-            completed: true
-        },
-        {
-            name: "NDWI Generation",
-            completed: true
-        },
-        {
-            name: "MNDWI Generation",
-            completed: false
-        },
-        {
-            name: "NDMI Generation",
-            completed: false
-        },
-        {
-            name: "EVI / SAVI / NDBI",
-            completed: false
-        },
-        {
-            name: "Feature Stack Creation",
-            completed: false
-        },
-        {
-            name: "Training Polygon Creation",
-            completed: false
-        },
-        {
-            name: "Random Forest Classification",
-            completed: false
-        },
-        {
-            name: "Accuracy Assessment",
-            completed: false
-        },
-        {
-            name: "Temporal Change Detection",
-            completed: false
-        },
-        {
-            name: "Wetland Degradation Assessment",
-            completed: false
-        },
-        {
-            name: "Restoration Priority Mapping",
-            completed: false
-        },
-        {
-            name: "Final Maps & Report",
-            completed: false
-        }
-    ],
+   tasks: [
 
-
-    // =========================
-    // TODAY
-    // =========================
-
-    today: {
-        date: "16 August 2026",
-
-        tasks: [
-            {
-                task: "Complete MNDWI generation",
-                completed: false
-            },
-            {
-                task: "Complete NDMI generation",
-                completed: false
-            },
-            {
-                task: "Check exported GeoTIFF values",
-                completed: false
-            }
-        ]
+    {
+        id: 1,
+        name: "Study Area Selection & Finalization",
+        phase: "Study Area",
+        status: "completed"
     },
 
-
-    // =========================
-    // TOMORROW
-    // =========================
-
-    tomorrow: {
-        date: "17 August 2026",
-
-        tasks: [
-            {
-                task: "Complete EVI",
-                completed: false
-            },
-            {
-                task: "Complete SAVI",
-                completed: false
-            },
-            {
-                task: "Complete NDBI",
-                completed: false
-            },
-            {
-                task: "Verify all generated indices",
-                completed: false
-            }
-        ]
+    {
+        id: 2,
+        name: "GEE Registration & Setup",
+        phase: "Data Preparation",
+        status: "completed"
     },
 
+    {
+        id: 3,
+        name: "Study Area Upload to GEE",
+        phase: "Data Preparation",
+        status: "completed"
+    },
+
+    {
+        id: 4,
+        name: "Landsat Data Collection",
+        phase: "Data Collection",
+        status: "completed"
+    },
+
+    {
+        id: 5,
+        name: "Reference LULC Download",
+        phase: "Data Collection",
+        status: "completed"
+    },
+
+    {
+        id: 6,
+        name: "NDVI Generation",
+        phase: "Feature Generation",
+        status: "completed"
+    },
+
+    {
+        id: 7,
+        name: "NDWI Generation",
+        phase: "Feature Generation",
+        status: "completed"
+    },
+
+    {
+        id: 8,
+        name: "MNDWI Generation",
+        phase: "Feature Generation",
+        status: "current"
+    },
+
+    {
+        id: 9,
+        name: "NDMI Generation",
+        phase: "Feature Generation",
+        status: "pending"
+    },
+
+    {
+        id: 10,
+        name: "EVI Generation",
+        phase: "Feature Generation",
+        status: "pending"
+    },
+
+    {
+        id: 11,
+        name: "SAVI Generation",
+        phase: "Feature Generation",
+        status: "pending"
+    },
+
+    {
+        id: 12,
+        name: "NDBI Generation",
+        phase: "Feature Generation",
+        status: "pending"
+    },
+
+    {
+        id: 13,
+        name: "Feature Stack Creation",
+        phase: "Feature Generation",
+        status: "pending"
+    },
+
+    {
+        id: 14,
+        name: "Training Polygon Creation",
+        phase: "Machine Learning",
+        status: "pending"
+    },
+
+    {
+        id: 15,
+        name: "Random Forest Classification",
+        phase: "Machine Learning",
+        status: "pending"
+    },
+
+    {
+        id: 16,
+        name: "Accuracy Assessment",
+        phase: "Machine Learning",
+        status: "pending"
+    },
+
+    {
+        id: 17,
+        name: "Temporal Change Detection",
+        phase: "Change Analysis",
+        status: "pending"
+    },
+
+    {
+        id: 18,
+        name: "Wetland Degradation Assessment",
+        phase: "Degradation",
+        status: "pending"
+    },
+
+    {
+        id: 19,
+        name: "Restoration Priority Mapping",
+        phase: "Restoration",
+        status: "pending"
+    },
+
+    {
+        id: 20,
+        name: "Final Maps & Report",
+        phase: "Final Output",
+        status: "pending"
+    }
+
+],
 
     // =========================
     // 30 DAY TARGET

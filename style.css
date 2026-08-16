@@ -562,3 +562,129 @@ footer {
         min-width: 80px;
     }
 }
+
+/* =====================================
+   PROJECT TASK MANAGER
+===================================== */
+
+.task-manager {
+    margin-bottom: 25px;
+}
+
+.task-manager-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.task-manager-header h2 {
+    color: #12372a;
+    margin-bottom: 5px;
+}
+
+.task-manager-header p {
+    color: #7b817e;
+    font-size: 13px;
+}
+
+.task-summary {
+    background: #e6f4ed;
+    color: #236b4c;
+    padding: 10px 18px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.task-summary strong {
+    display: block;
+    font-size: 22px;
+}
+
+.task-summary span {
+    font-size: 11px;
+}
+
+
+/* TASK */
+
+.workflow-task {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+    padding: 13px 15px;
+
+    border-bottom: 1px solid #edf0ef;
+}
+
+.workflow-task:last-child {
+    border-bottom: none;
+}
+
+.workflow-checkbox {
+    width: 19px;
+    height: 19px;
+    cursor: pointer;
+}
+
+.workflow-name {
+    flex: 1;
+    color: #374151;
+}
+
+.workflow-phase {
+    font-size: 11px;
+    background: #eef4f1;
+    color: #4b6258;
+    padding: 5px 9px;
+    border-radius: 6px;
+}
+
+.workflow-status {
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.status-completed {
+    color: #26905f;
+}
+
+.status-current {
+    color: #d18a19;
+}
+
+.status-pending {
+    color: #9ca3af;
+}
+
+
+/* COMPLETED TASK */
+
+.workflow-task.completed .workflow-name {
+    text-decoration: line-through;
+    color: #9ca3af;
+}
+
+
+/* CURRENT TASK */
+
+.workflow-task.current {
+    background: #fffaf0;
+    border-left: 4px solid #d39b24;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .workflow-task {
+        flex-wrap: wrap;
+    }
+
+    .workflow-phase {
+        margin-left: 33px;
+    }
+
+}
