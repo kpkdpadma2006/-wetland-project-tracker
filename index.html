@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wetland Research Project Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div>
+            <h1>🌿 Wetland Research Project</h1>
+            <p>Wetland Detection, Degradation Assessment & Restoration Priority Mapping</p>
+        </div>
+
+        <div class="status">
+            <span class="dot"></span>
+            Project Active
+        </div>
+    </header>
+
+    <main>
+
+        <!-- Overview -->
+        <section class="hero">
+            <div>
+                <h2>Vedaranyam–Rajamadam Coastal Wetland</h2>
+                <p>
+                    Remote Sensing • GIS • Random Forest
+                </p>
+            </div>
+
+            <div class="progress-box">
+                <h3>Overall Progress</h3>
+                <div class="progress">
+                    <div class="progress-fill" style="width: 35%"></div>
+                </div>
+                <strong>35%</strong>
+            </div>
+        </section>
+
+
+        <!-- Current Status -->
+        <section class="grid">
+
+            <div class="card">
+                <span class="icon">📍</span>
+                <h3>Current Phase</h3>
+                <p class="highlight">Feature Generation</p>
+                <small>In Progress</small>
+            </div>
+
+            <div class="card">
+                <span class="icon">📅</span>
+                <h3>Today's Task</h3>
+                <p class="highlight">Complete MNDWI & NDMI</p>
+                <small>Next immediate task</small>
+            </div>
+
+            <div class="card">
+                <span class="icon">🛰️</span>
+                <h3>Data Status</h3>
+                <p class="highlight">Landsat + Reference LULC</p>
+                <small>Collection in progress</small>
+            </div>
+
+            <div class="card">
+                <span class="icon">🤖</span>
+                <h3>ML Status</h3>
+                <p class="highlight">Random Forest</p>
+                <small>Not started</small>
+            </div>
+
+        </section>
+
+        <!-- ================================
+     DAILY & MONTHLY PLAN
+================================ -->
+
+<section class="planning-grid">
+
+    <!-- TODAY -->
+
+    <div class="plan-card today-card">
+
+        <div class="plan-header">
+            <div>
+                <span class="plan-icon">🔥</span>
+                <h2>Today's Tasks</h2>
+            </div>
+
+            <span id="today-date"></span>
+        </div>
+
+        <div id="today-tasks"></div>
+
+    </div>
+
+
+    <!-- TOMORROW -->
+
+    <div class="plan-card tomorrow-card">
+
+        <div class="plan-header">
+            <div>
+                <span class="plan-icon">➡️</span>
+                <h2>Tomorrow</h2>
+            </div>
+
+            <span id="tomorrow-date"></span>
+        </div>
+
+        <div id="tomorrow-tasks"></div>
+
+    </div>
+
+</section>
+
+
+<!-- 30 DAY TARGET -->
+
+<section class="panel monthly-plan">
+
+    <div class="month-title">
+
+        <div>
+            <h2>🎯 30-Day Research Target</h2>
+
+            <p>
+                <span id="target-start"></span>
+                →
+                <span id="target-end"></span>
+            </p>
+        </div>
+
+        <div class="days-box">
+            <strong id="days-left">30</strong>
+            <span>Days Left</span>
+        </div>
+
+    </div>
+
+
+    <div id="monthly-weeks"></div>
+
+</section>
+
+
+        <!-- Completed & Upcoming -->
+        <section class="two-column">
+
+            <div class="panel">
+                <h2>✅ Completed</h2>
+
+                <ul>
+                    <li>Study area finalized</li>
+                    <li>GEE registration & setup</li>
+                    <li>Study area uploaded to GEE</li>
+                    <li>Landsat data tested</li>
+                    <li>NDVI generated</li>
+                    <li>NDWI generated</li>
+                    <li>Reference LULC downloaded</li>
+                    <li>GeoTIFF export tested</li>
+                </ul>
+            </div>
+
+
+            <div class="panel">
+                <h2>⏳ Upcoming Work</h2>
+
+                <ol>
+                    <li>Complete MNDWI & NDMI</li>
+                    <li>Complete remaining indices</li>
+                    <li>Create feature stack</li>
+                    <li>Create training polygons</li>
+                    <li>Random Forest classification</li>
+                    <li>Accuracy assessment</li>
+                    <li>Temporal change detection</li>
+                    <li>Degradation assessment</li>
+                    <li>Restoration priority mapping</li>
+                    <li>Final maps & report</li>
+                </ol>
+            </div>
+
+        </section>
+
+
+        <!-- Project Modules -->
+        <section class="panel">
+
+            <h2>📊 Project Modules</h2>
+
+            <div class="module">
+                <div>
+                    <span>Study Area</span>
+                    <small>Completed</small>
+                </div>
+                <strong>100%</strong>
+            </div>
+
+            <div class="module">
+                <div>
+                    <span>Literature Review</span>
+                    <small>In Progress</small>
+                </div>
+                <strong>70%</strong>
+            </div>
+
+            <div class="module">
+                <div>
+                    <span>Data Collection</span>
+                    <small>In Progress</small>
+                </div>
+                <strong>60%</strong>
+            </div>
+
+            <div class="module">
+                <div>
+                    <span>Feature Generation</span>
+                    <small>In Progress</small>
+                </div>
+                <strong>45%</strong>
+            </div>
+
+            <div class="module">
+                <div>
+                    <span>Random Forest</span>
+                    <small>Pending</small>
+                </div>
+                <strong>0%</strong>
+            </div>
+
+            <div class="module">
+                <div>
+                    <span>Change Detection</span>
+                    <small>Pending</small>
+                </div>
+                <strong>0%</strong>
+            </div>
+
+            <div class="module">
+                <div>
+                    <span>Degradation Assessment</span>
+                    <small>Pending</small>
+                </div>
+                <strong>0%</strong>
+            </div>
+
+            <div class="module">
+                <div>
+                    <span>Restoration Priority</span>
+                    <small>Pending</small>
+                </div>
+                <strong>0%</strong>
+            </div>
+
+        </section>
+
+
+        <!-- Workflow -->
+        <section class="panel">
+
+            <h2>🔄 Research Workflow</h2>
+
+            <div class="workflow">
+
+                <div class="step completed">
+                    <span>1</span>
+                    <p>Data Collection</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step completed">
+                    <span>2</span>
+                    <p>Pre-processing</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step active">
+                    <span>3</span>
+                    <p>Feature Generation</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <span>4</span>
+                    <p>Random Forest</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <span>5</span>
+                    <p>Change Detection</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <span>6</span>
+                    <p>Degradation</p>
+                </div>
+
+                <div class="arrow">→</div>
+
+                <div class="step">
+                    <span>7</span>
+                    <p>Restoration</p>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Daily Log -->
+        <section class="panel">
+
+            <h2>📝 Recent Progress</h2>
+
+            <div class="log">
+                <span>16 Aug 2026</span>
+                <p>Reference LULC downloaded and NDVI/NDWI verified.</p>
+            </div>
+
+            <div class="log">
+                <span>15 Aug 2026</span>
+                <p>Landsat data processing and GeoTIFF export tested.</p>
+            </div>
+
+            <div class="log">
+                <span>05 Aug 2026</span>
+                <p>Study-area shapefile successfully uploaded to GEE.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Wetland Research Project Tracker • Vedaranyam–Rajamadam</p>
+    </footer>
+
+    <script src="project-data.js"></script>
+       <script src="script.js"></script>
+
+</body>
+</html>
